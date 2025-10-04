@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>クリッカーゲーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        #score {
+            font-size: 72px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            transition: transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <h1>クリッカーゲーム</h1>
+    <div id="score">0</div>
+    <button onclick="addScore()">クリック!</button>
+
+    <script>
+        let score = 0;
+
+        function addScore() {
+            score = score + 1;
+            document.getElementById('score').textContent = score;
+        }
+    </script>
+</body>
+</html>
