@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message">Hello World!</h1>
+    <button onclick="changeMessage()">クリックしてね!</button>
+
+    <script>
+        function changeMessage() {
+            document.getElementById('message').textContent = 'ゲーム開発スタート!';
+        }
+    </script>
+</body>
+</html>
