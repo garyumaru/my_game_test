@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>クリッカーゲーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        #score {
+            font-size: 72px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            transition: transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        #message {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 クリッカーゲーム</h1>
+    <div id="score">0</div>
+    <button onclick="addScore()">クリック!</button>
+    <div id="message"></div>
+
+    <script>
+        let score = 0;
+
+        function addScore() {
+            score++;
+            document.getElementById('score').textContent = score;
+            
+            // 特定のスコアでメッセージ表示
+            if (score === 10) {
+                document.getElementById('message').textContent = '🎉 10回達成！';
+            } else if (score === 50) {
+                document.getElementById('message').textContent = '🔥 50回達成！すごい！';
+            } else if (score === 100) {
+                document.getElementById('message').textContent = '👑 100回達成！あなたは達人です！';
+            }
+        }
+    </script>
+</body>
+</html>
